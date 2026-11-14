@@ -47,6 +47,7 @@ powershell -ExecutionPolicy Bypass -File .\doctor.ps1
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\doctor.ps1 -Install
 ```
+- 若 Python 装在虚拟环境（不在 PATH 里），先设置环境变量再跑 doctor：`setx DSH_FORENSIC_PYTHON "C:\path\to\venv\Scripts\python.exe"`（新开终端生效）
 ## 安装
 
 ### 1. 放置脚本
