@@ -1,0 +1,37 @@
+{
+  "name": "dsh-police-mode",
+  "version": "0.1.0",
+  "description": "DSH 所长模式：四层取证协作预设 + 案件内容网络 / 实时答题看板 / 资源调度脚本",
+  "type": "module",
+  "license": "MIT",
+  "author": "HJSSSRX",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HJSSSRX/dsh-police-mode.git"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "plugin",
+    "bundle",
+    "forensics",
+    "agent-preset"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "files": [
+    "cordis.patch.yml",
+    "scripts",
+    "docs",
+    "extras",
+    "install.ps1",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  }
+}
