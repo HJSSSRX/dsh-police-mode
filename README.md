@@ -1,4 +1,4 @@
-# dsh-police-mode（所长模式）
+﻿# dsh-police-mode（所长模式）
 
 > 给 [DeepSeek Harness](https://github.com/HJSSSRX/dsh-police-mode) 用的取证竞赛协作预设：
 > 四层角色（所长/民警/辅警/警械）+ 案件内容网络 + 实时答题看板 + 资源调度脚本。
@@ -31,6 +31,22 @@ extras/
 install.ps1            把脚本安装到 C:\dsh-forensic\ 并自检
 ```
 
+
+## 依赖安装（首次使用先跑 doctor.ps1）
+
+本插件**不会静默安装任何东西**，只做检查并给安装命令：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\doctor.ps1
+```
+
+检查项：Node ≥ 20、git、7-Zip、Python + 取证库（pyewf/pytsk3/dissect/regipy/pycryptodome/capstone/pefile/scapy/pdfplumber/openpyxl/mnemonic/eth-account/PyMySQL）、WSL + fls/icat/mmls/ewfmount/xfs_db/cryptsetup、火眼套件（可选）、8766 端口。
+
+确认后可自动安装可自动的部分（node/7z/python/pip 包；WSL 与火眼仍给命令、不代装）：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\doctor.ps1 -Install
+```
 ## 安装
 
 ### 1. 放置脚本

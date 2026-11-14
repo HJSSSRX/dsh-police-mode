@@ -15,7 +15,7 @@ New-Item -ItemType Directory -Force -Path $Dir | Out-Null
 New-Item -ItemType Directory -Force -Path (Join-Path $Dir 'docs') | Out-Null
 
 Copy-Item (Join-Path $root 'scripts\*.mjs') $Dir -Force
-Copy-Item (Join-Path $root 'scripts\*.ps1') $Dir -Force
+Copy-Item (Join-Path $root 'scripts\*.ps1') $Dir -Force`r`nCopy-Item (Join-Path $root 'doctor.ps1') $Dir -Force
 Copy-Item (Join-Path $root 'docs\*') (Join-Path $Dir 'docs') -Recurse -Force
 Copy-Item (Join-Path $root 'extras\*') $Dir -Force -ErrorAction SilentlyContinue
 
